@@ -1,2 +1,57 @@
-mostafa is a nice guy 
-jbjbxdk
+void calculator(float ,char  , float);
+int main()
+{
+    int x ;
+    printf("please enter how many operations do you want to do : \n");
+    scanf("%d",&x);
+
+   float firstno;
+     float secondno;
+     char op;
+         for(int i =0 ;i<=x;i++){
+    printf("please enter the first number from (-2147483648 -->2147483647) \n");
+   dumbuser: scanf("%f",&firstno);
+     if(firstno>2147483648){
+        printf("the number you have entered is out of range please enter a number once again \n");
+        goto dumbuser;
+      }
+     printf("please enter the wanted calculation operator (+,-,/,*,%) \n ");
+     scanf(" %c",&op);
+      printf("please enter the second number from (-2147483648 -->2147483647) \n");
+      retarded:scanf("%f",&secondno);
+     if(firstno<-2147483647){
+        printf("the number you have entered is out of range please enter a number once again");
+        goto retarded;
+      }
+      calculator(firstno,op,secondno);
+         }
+    return 0;
+}
+ void calculator(float one ,char sign , float two){
+
+switch(sign){
+case '+':
+ printf("the sum of the two numbers are equal : %f \n" ,(one+two));
+ break ;
+case '-':
+ printf("the subtraction of the two numbers are equal : %f \n" ,(one-two));
+ break ;
+case '/':
+if (two==0){
+        printf("the division of the two numbers are impossible \n");
+         main();
+}
+else
+ printf("the sum of the two numbers are equal : %f \n" ,(one/two));
+ break ;
+case '*':
+ printf("the multiplication of the two numbers are equal : %f \n" ,(one*two));
+ break ;
+case '%':
+     printf("the remainder of the two numbers are equal : %d \n" ,((int)one%(int)two));
+     break;
+default :
+    printf("invalid input");
+
+}
+ }
